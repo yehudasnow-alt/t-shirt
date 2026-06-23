@@ -1,3 +1,10 @@
+"use client";
+
+import React, { useState, useEffect } from 'react';
+import { Sparkles, Shirt, Wand2, Package, CheckCircle2, ChevronRight, Loader2, Image as ImageIcon } from 'lucide-react';
+
+// ... המשך הקוד ...
+
 import React, { useState, useEffect } from 'react';
 import { Sparkles, Shirt, Wand2, Package, CheckCircle2, ChevronRight, Loader2, Image as ImageIcon } from 'lucide-react';
 
