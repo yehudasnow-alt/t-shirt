@@ -36,7 +36,10 @@ export async function POST(request: Request) {
       quality: "hd",
       size: "1024x1024",
     });
-    const rawImageUrl = aiResponse.data[0].url;
+    if (!aiResponse.data || !aiResponse.data[0]?.url) {
+     throw new Error("No image returned from OpenAI");
+   }
+   const rawImageUrl = aiResponse.data[0].url;
 
     // שלב ג': שליחה ל-API להסרת רקע (למשל Photoroom)
     const bgResponse = await fetch('https://image-api.photoroom.com/v1/segment', {
